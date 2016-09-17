@@ -40,3 +40,12 @@ local portal_out = {
 }
 
 minetest.register_node("easyporter:out",portal_out)
+
+minetest.register_craft{
+	output = "easyporter:out",
+	recipe = {
+		{"default:diamond","default:mese_crystal","default:diamond"},
+		{"default:diamond","default:mese_crystal","default:diamond"},
+		{"default:diamond","default:mese","default:diamond"},
+	},
+}
