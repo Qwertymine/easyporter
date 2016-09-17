@@ -56,7 +56,7 @@ e.try_collapse = function(name)
 	if not node or node ~= name then
 		e.remove_portal(name)
 		if node ~= name then
-			e.set_portal(node,pos)
+			e.set_portal(pos,node)
 		end
 		return true
 	end

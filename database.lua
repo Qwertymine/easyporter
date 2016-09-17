@@ -6,7 +6,9 @@ local portals
 local file = io.open(database_path,"r")
 if file then
 	local portal_string = file:read("*all")
-	portals = minetest.parse_json(portal_string)
+	if portal_string and portal_string ~= "" then
+		portals = minetest.parse_json(portal_string)
+	end
 	file:close()
 end
 
