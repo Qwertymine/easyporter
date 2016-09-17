@@ -14,12 +14,14 @@ local portal_out = {
 	tiles = {"default_mese_block.png"},
 	is_ground_content = false,
 	groups = {dig_immediate=3,source=1},
+	--[[
 	after_place_node = function(pos)
 		try_set_portal(pos)
 	end,
 	on_contruct = function(pos)
 		try_set_portal(pos)
 	end,
+	--]]
 	on_rightclick = function(pos,node)
 		try_set_portal(pos)
 	end,
